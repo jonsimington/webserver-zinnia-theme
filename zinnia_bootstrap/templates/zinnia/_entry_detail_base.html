@@ -74,7 +74,7 @@
     {% endblock %}
     {% block entry-tags %}
     <p class="entry-tags">
-      <i class="icon-tags"></i> <strong>{% trans "Tags" %}</strong> :
+      <i class="glyphicon glyphicon-tags"></i> <strong>{% trans "Tags" %}</strong> :
       {% for tag in object.tags_list %}
       <a href="{% url 'zinnia_tag_detail' tag %}"
          title="{% blocktrans %}Show all entries tagged by {{ tag }}{% endblocktrans %}"
@@ -86,7 +86,7 @@
     {% endblock %}
     {% block entry-shorturl %}
     <p class="entry-shorturl">
-      <i class="icon-bookmark"></i> <strong>{% trans "Short url" %}</strong> :
+      <i class="glyphicon glyphicon-bookmark"></i> <strong>{% trans "Short url" %}</strong> :
       <a href="{{ object.short_url }}"
          title="{% blocktrans with object=object.title %}Short URL to {{ object }}{% endblocktrans %}"
          rel="shortlink">
@@ -96,7 +96,7 @@
     {% endblock %}
     {% block entry-comments %}
     <p class="entry-comments">
-      <i class="icon-comment"></i> <strong>{% trans "Discussions" %}</strong> :
+      <i class="glyphicon glyphicon-comment"></i> <strong>{% trans "Discussions" %}</strong> :
       {% with comment_count=object.comment_count %}
       {% if comment_count %}
       <a href="{{ object.get_absolute_url }}#comments"
